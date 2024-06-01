@@ -22,5 +22,18 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('12345678'),
 
         ]);
+
+        // dummy data for company
+        \App\Models\Company::create([
+            'name' => 'PT. Attendnow',
+            'email' => 'admin@attendnow.com',
+            'address' => 'Jl. Jendral Sudirman No. 10, Jakarta Selatan',
+            'latitude' => '-6.175110',
+            'longitude' => '106.865036',
+            'radius_km' => '10',
+            'time_in' => '08:00',
+            'time_out' => '17:00',
+        ]);
+
     }
 }
