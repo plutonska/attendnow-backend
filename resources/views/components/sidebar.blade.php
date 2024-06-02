@@ -14,18 +14,24 @@
                     <span>Dashboard</span></a>
             </li>
             
-            <li class="nav-item dropdown ">
+            <li class="nav-item dropdown">
                 <a href="{{route('users.index')}}"
                     class="nav-link ">
                     <i class="far fa-user"></i> 
                     <span>Users</span></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item dropdown">
                 <a href="{{ route('companies.show', 1) }}" class="nav-link">
-                    <i class="fa-regular fa-building"></i>
+                    <i class="far fa-building fa-lg"></i>
                     <span>Company</span>
                 </a>
             </li>
-            
+            <li class="nav-item dropdown">
+                <a href="{{ route('attendances.index') }}" class="nav-link">
+                    <i class="fas fa-clipboard-user fa-lg"></i>
+                    <span>Attendances</span>
+                </a>
+            </li>
+        </ul>
     </aside>
 </div>
