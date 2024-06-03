@@ -1,0 +1,556 @@
+{
+	"info": {
+		"_postman_id": "779918d7-444c-4fd7-af9c-f656ee548143",
+		"name": "Attendnow-endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35578118"
+	},
+	"item": [
+		{
+			"name": "api login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"hendri@mail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response 200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"hendri@mail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.19"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 01 Jun 2024 18:25:20 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"id\": 11,\n        \"name\": \"Hendri\",\n        \"email\": \"hendri@mail.com\",\n        \"email_verified_at\": \"2024-05-31T14:48:51.000000Z\",\n        \"two_factor_secret\": null,\n        \"two_factor_recovery_codes\": null,\n        \"two_factor_confirmed_at\": null,\n        \"created_at\": \"2024-05-31T14:48:51.000000Z\",\n        \"updated_at\": \"2024-06-01T15:01:29.000000Z\",\n        \"phone\": \"081213234394\",\n        \"role\": \"admin\",\n        \"position\": \"Backend Developer\",\n        \"department\": \"Technology\",\n        \"face_embedding\": null,\n        \"image_url\": null\n    },\n    \"token\": \"7|dgSqqX96ecOrpqiRxSj9g0AGSFQxL7lghybRZ4LBc68eab6c\"\n}"
+				}
+			]
+		},
+		{
+			"name": "api logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "7|dgSqqX96ecOrpqiRxSj9g0AGSFQxL7lghybRZ4LBc68eab6c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api get user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|VV4PB6TluIvDauLwrDCtxBKfouja1CYsOWV25aT59cfa1e04",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 7|dgSqqX96ecOrpqiRxSj9g0AGSFQxL7lghybRZ4LBc68eab6c"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api get company",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|VV4PB6TluIvDauLwrDCtxBKfouja1CYsOWV25aT59cfa1e04",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 7|dgSqqX96ecOrpqiRxSj9g0AGSFQxL7lghybRZ4LBc68eab6c"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/company",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api checkin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|7nRKdmJv3bNFfRYIqTXpZTzabfpB9FZsxrMsW0WNd84b581b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"latitude\":\"128446.5579\",\r\n    \"longitude\":\"3947749.7373\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/checkin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"checkin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api checkout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|7nRKdmJv3bNFfRYIqTXpZTzabfpB9FZsxrMsW0WNd84b581b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"latitude\":\"145446.5579\",\r\n    \"longitude\":\"3527349.7373\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/checkout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api ischeckedin",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|v8eR3LT7BHNwVdWtKLjOLwiKmhUf8O71C2epaGiN4d9eb490",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"latitude\":\"225446.5579\",\r\n    \"longitude\":\"33527349.7373\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/is-checkin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"is-checkin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api get not by user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|v8eR3LT7BHNwVdWtKLjOLwiKmhUf8O71C2epaGiN4d9eb490",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"latitude\":\"225446.5579\",\r\n    \"longitude\":\"33527349.7373\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/is-checkin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"is-checkin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api update profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|7nRKdmJv3bNFfRYIqTXpZTzabfpB9FZsxrMsW0WNd84b581b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Plutonska/Downloads/wendigo-banner-white.png"
+						},
+						{
+							"key": "face_embedding",
+							"value": "afajhlaffueuafhafhhfffalaflhafbc",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/update-profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"update-profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api create absence",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|Mu0MF9YWwDKxtSES632xe5lt02cx2Vy2CZMcaSU0f0e0abe1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Plutonska/Pictures/gmail.png"
+						},
+						{
+							"key": "date_absence",
+							"value": "2024-06-04",
+							"type": "text"
+						},
+						{
+							"key": "reason",
+							"value": "Sakit Hati",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/api-absence",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"api-absence"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api create note",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|Mu0MF9YWwDKxtSES632xe5lt02cx2Vy2CZMcaSU0f0e0abe1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Besok Kerjain golang\",\r\n    \"note\":\"Kelarin feature auth di project golang\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/api-note",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"api-note"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
