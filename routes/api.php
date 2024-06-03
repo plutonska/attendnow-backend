@@ -30,8 +30,11 @@ Route::get('/is-checkin', [App\Http\Controllers\Api\AttendanceController::class,
 //update profile
 Route::post('/update-profile', [App\Http\Controllers\Api\AuthController::class, 'updateProfile'])->middleware('auth:sanctum');
 
+//create absence
+Route::apiResource('/api-absence', App\Http\Controllers\Api\AbsenceController::class)->middleware('auth:sanctum');
 
-
+//notes
+Route::apiResource('/api-note', App\Http\Controllers\Api\NoteController::class)->middleware('auth:sanctum');
 
 
 
