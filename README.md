@@ -1,6 +1,5 @@
 <p align="center">
     <img src="https://github.com/plutonska/attendnow-backend/assets/30681204/2183141c-a63a-4d9b-9092-75dc178f5c54" alt="Stisla logo" width="75" height="75">
-      ![attendnow-logo](https://github.com/plutonska/attendnow-backend/assets/30681204/2183141c-a63a-4d9b-9092-75dc178f5c54)
   </a>
 </p>
 
