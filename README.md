@@ -7,7 +7,7 @@
 
 <span align="center">
 
-**Attendnow** Attendnow is a comprehensive attendance management system designed to streamline the process of tracking employee attendance. This repository contains the backend codebase for the Attendnow application, built with Laravel & Stisla Admin Dashboard.
+**Attendnow** is a comprehensive attendance management system designed to streamline the process of tracking employee attendance. This repository contains the backend codebase for the Attendnow application, built with Laravel & Stisla Admin Dashboard.
 
 </span>
 
